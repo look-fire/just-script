@@ -1,0 +1,22 @@
+# jenkins log parser plugin rule file for unified_build.sh
+
+ok /ERROR: No Jack server running/
+ok /ERROR: No Jack server to kill/
+
+error /^[0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}:[0-9]{2} ERROR: /
+info /^[0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}:[0-9]{2} INFO: /
+warn /^[0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}:[0-9]{2} INFO: /
+
+error /:[0-9]+: error: /
+error /ERROR: Connection was broken: java.io.IOException: Unexpected termination of the channel/
+error /make: \*\*\* [^ ]* * Error/
+error /syntax error: invalid arithmetic operator/
+error /cp: .* No space left on device/
+error /Agent went offline during the build/
+error /ninja: error: /
+error /make: \** Waiting for unfinished jobs.*/
+error /.*Android.mk:[0-9]*: \*\*\* .*/
+error /ERROR: [^ ]+:[0-9]+:/
+error /fatal: [^ ]*/
+error /OSError: \[Errno [0-9]+/
+error /EnvInject.+ERROR/
